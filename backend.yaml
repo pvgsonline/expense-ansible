@@ -36,7 +36,8 @@
   - name: unzip the file to app folder
     ansible.builtin.unarchive:
       src: /tmp/backend.zip
-      dest: cd /app
+      dest: /app
+      remote_src: yes
 
   - name: download the dependency
     ansible.builtin.command: npm install
