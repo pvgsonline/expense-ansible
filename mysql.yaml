@@ -7,8 +7,9 @@
   tasks:
   - name: install pip service
     ansible.builtin.pip:
-     name: pysql
-     state: present
+     name: 
+      - PyMySQL
+     executable: pip3.9
 
   - name: install mysql service
     ansible.builtin.package:
